@@ -63,7 +63,7 @@ def main():
         if (i % 5) == 0:
             image_list.append(imageio.imread("temp.png"))
 
-    imageio.mimsave("display.gif", image_list, duration=0.1)
+    imageio.mimsave("picture_result/mpc_display.gif", image_list, duration=0.1)
 
     plt.figure(2)
     plt.subplot(2, 1, 1)
