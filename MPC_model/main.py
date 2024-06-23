@@ -75,7 +75,7 @@ def main():
     plt.subplot(2, 1, 2)
     plt.plot(lat_err)
     plt.title("lateral error")
-    plt.savefig("picture_result/mpc_lateral error.png")
+    plt.savefig("picture_result/mpc_lateral_error.png")
     plt.show()
 
 

@@ -55,6 +55,7 @@ def main():
         plt.axis("equal")
         plt.grid(True)
         plt.pause(0.001)
+        plt.title("LQR trajectory")
         plt.savefig("picture_result/temp.png")
         i += 1
         if (i % 5) == 0:
