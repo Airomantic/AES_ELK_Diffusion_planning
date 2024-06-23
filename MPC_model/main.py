@@ -56,6 +56,7 @@ def main():
         plt.plot(trajectory_x, trajectory_y, "-r", label="trajectory")
         plt.plot(ref_path[target_ind, 0], ref_path[target_ind, 1], "go", label="target")
         plt.axis("equal")
+        plt.title("MPC_model")
         plt.grid(True)
         plt.pause(0.001)
         plt.savefig("temp.png")
@@ -74,6 +75,7 @@ def main():
     plt.subplot(2, 1, 2)
     plt.plot(lat_err)
     plt.title("lateral error")
+    plt.savefig("picture_result/mpc_lateral error.png")
     plt.show()
 
 
