@@ -55,22 +55,24 @@ def main():
         plt.axis("equal")
         plt.grid(True)
         plt.pause(0.001)
-    #     plt.savefig("temp.png")
-    #     i += 1
-    #     if (i % 5) == 0:
-    #         image_list.append(imageio.imread("temp.png"))
-    #
-    # imageio.mimsave("display.gif", image_list, duration=0.1)
+        plt.savefig("picture_result/temp.png")
+        i += 1
+        if (i % 5) == 0:
+            print(imageio.imread("picture_result/temp.png").shape)
+            image_list.append(imageio.imread("picture_result/temp.png"))
+    
+    imageio.mimsave("picture_result/LQR_display.gif", image_list, duration=0.1)
 
     plt.figure(2)
     plt.subplot(2, 1, 1)
     plt.plot(ref_path[:, 0], ref_path[:, 1], '-.b', linewidth=1.0)
     plt.plot(trajectory_x, trajectory_y, 'r')
-    plt.title("actual tracking effect")
+    plt.title("LQR actual tracking effect")
 
     plt.subplot(2, 1, 2)
     plt.plot(lat_err)
     plt.title("lateral error")
+    plt.savefig("picture_result/LQR_lateral_error.png")
     plt.show()
 
 

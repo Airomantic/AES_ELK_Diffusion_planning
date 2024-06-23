@@ -70,7 +70,7 @@ def main():
     plt.subplot(2, 1, 1)
     plt.plot(ref_path[:, 0], ref_path[:, 1], '-.b', linewidth=1.0)
     plt.plot(trajectory_x, trajectory_y, 'r')
-    plt.title("actual tracking effect")
+    plt.title("mpc actual tracking effect")
 
     plt.subplot(2, 1, 2)
     plt.plot(lat_err)
